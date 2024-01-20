@@ -1,0 +1,229 @@
+* {
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 13px;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin: 0;
+    background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, bottom right;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 42%, 76%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.elementsOnTop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    width: 40vh;
+}
+
+.titleBox1 {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    max-width: 45vh;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+    color: hsl(300, 43%, 22%);
+}
+
+.textBox1 {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+    margin-top: 0;
+    padding-top: 0;
+    color: hsla(302, 10%, 53%, 0.966);
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 15px;
+    letter-spacing: 2pt ;
+}
+
+.review1,
+.review2,
+.review3 {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: hsl(210, 46%, 95%);
+    background-color: #F7F2F7;
+    width: 55vh;
+    height: 2.5rem;
+}
+.review2{
+    margin-left: 2rem;
+}
+.review3{
+    margin-left: 4rem;
+}
+.reviewContainer > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.reviewContainer img {
+    height: 1.75rem;
+}
+.reviewContainer {
+    margin-top: 5rem;
+    
+}
+.review1 p,
+.review2 p,
+.review3 p {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    color:  hsl(300, 43%, 22%);
+    font-size: 15px;
+}
+
+.darkbg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.darkbg h3{
+    color: hsl(0, 0%, 100%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+ }
+ .darkbg h4{
+     color:   hsla(333, 80%, 67%, 0.724);
+ }
+.darkbg p{
+    color: hsl(0, 0%, 100%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.user1,
+.user2,
+.user3 {
+    background-color: hsl(300, 43%, 22%);
+    width: 20vw;
+    height: auto;
+    border-radius: 10px;
+}
+.user2 {
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+}
+.user3 {
+    margin-top: 3rem;
+    margin-left: 1.5rem;
+}
+
+.identityUser {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+}
+
+.identityUser img {
+    border-radius: 50%;
+    width: 7vh;
+    height: 7vh;
+}
+
+.username {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.username h3,
+.username h4 {
+    margin: 0;
+    padding: 0;
+}
+  
+@media screen and (max-width: 750px) {
+    .elementsOnTop {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+    .box1 {
+        margin-left: 0;
+        width: 100%;   
+    }
+    .darkbg {
+        flex-direction: column;
+        align-items: center;
+    }
+    .titleBox1 {
+        margin-left: 4rem;
+    }
+    .textBox1 {
+        margin-bottom: -2rem;
+    }
+    .reviewContainer{
+        margin-bottom: 2rem;
+    }
+    .review1 {
+        width: 100%;
+        height: 13vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .stars {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding-bottom: 0;
+        margin-bottom: 0.1rem;
+      }
+      .paragraphReview {
+         margin-top: -1.5rem;    
+      }
+      .review2 {
+        margin: 0;
+        height: 13vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .review3 {
+        margin: 0;
+        height: 13vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .darkbg {
+        margin-bottom: 5rem;
+      }
+      
+    .user1,
+    .user2,
+    .user3 {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        width: 80vw;
+    }
+    .user1 {
+        margin-left: 1rem;
+    }
+    .username {
+       
+        margin-right: 4rem;    
+    }
+}
